@@ -1,0 +1,926 @@
+{
+  "navigation": {
+    "home": "الرئيسية",
+    "leads": "العملاء المحتملين",
+    "partners": "الشركاء",
+    "products": "المنتجات",
+    "orders": "الطلبات",
+    "parcels": "الطرود",
+    "stats": "الإحصائيات",
+    "balance": "الرصيد",
+    "settings": "الإعدادات",
+    "profile": "الملف الشخصي",
+    "tracking": "التتبع",
+    "profileDescription": "إدارة معلومات ملفك الشخصي.",
+    "settingsDescription": "إدارة إعدادات ملفك الشخصي والتفضيلات."
+  },
+  "forms": {
+    "labels": {
+      "firstName": "الاسم الأول",
+      "lastName": "الاسم الأخير",
+      "phone": "رقم الهاتف",
+      "email": "البريد الإلكتروني",
+      "name": "الاسم",
+      "description": "الوصف",
+      "category": "الفئة",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "status": "الحالة"
+    },
+    "placeholders": {
+      "enterFirstName": "أدخل الاسم الأول",
+      "enterLastName": "أدخل الاسم الأخير",
+      "enterPhone": "أدخل رقم الهاتف",
+      "enterEmail": "أدخل البريد الإلكتروني",
+      "enterName": "أدخل الاسم",
+      "enterDescription": "أدخل الوصف",
+      "selectCategory": "اختر الفئة",
+      "enterPrice": "أدخل السعر",
+      "enterQuantity": "أدخل الكمية"
+    },
+    "validation": {
+      "required": "هذا الحقل مطلوب",
+      "minLength": "يجب أن يكون على الأقل {min} أحرف",
+      "maxLength": "يجب أن يكون على الأكثر {max} أحرف",
+      "invalidEmail": "تنسيق البريد الإلكتروني غير صحيح",
+      "invalidPhone": "رقم الهاتف غير صحيح",
+      "invalidPrice": "تنسيق السعر غير صحيح",
+      "invalidQuantity": "تنسيق الكمية غير صحيح",
+      "invalidUrl": "تنسيق الرابط غير صحيح",
+      "invalidDate": "تنسيق التاريخ غير صحيح",
+      "firstNameRequired": "الاسم الأول مطلوب",
+      "lastNameRequired": "الاسم الأخير مطلوب",
+      "phoneRequired": "رقم الهاتف مطلوب",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "nameRequired": "الاسم مطلوب",
+      "descriptionRequired": "الوصف مطلوب",
+      "categoryRequired": "الفئة مطلوبة",
+      "priceRequired": "السعر مطلوب",
+      "quantityRequired": "الكمية مطلوبة",
+      "productRequired": "المنتج مطلوب",
+      "colorRequired": "اللون مطلوب",
+      "sizeRequired": "المقاس مطلوب",
+      "wilayaRequired": "الولاية مطلوبة",
+      "communeRequired": "البلدية مطلوبة",
+      "agencyRequired": "الوكالة مطلوبة",
+      "retailPriceRequired": "سعر التجزئة مطلوب",
+      "wholesalePriceRequired": "سعر الجملة مطلوب",
+      "retailCommissionRequired": "عمولة التجزئة مطلوبة",
+      "wholesaleCommissionRequired": "عمولة الجملة مطلوبة",
+      "weightRequired": "الوزن مطلوب",
+      "trackingRequired": "رقم التتبع مطلوب",
+      "firstNamePositive": "الاسم الأول يجب أن يكون موجب",
+      "lastNamePositive": "الاسم الأخير يجب أن يكون موجب",
+      "phonePositive": "الهاتف يجب أن يكون موجب",
+      "emailPositive": "البريد الإلكتروني يجب أن يكون موجب",
+      "namePositive": "الاسم يجب أن يكون موجب",
+      "descriptionPositive": "الوصف يجب أن يكون موجب",
+      "categoryPositive": "الفئة يجب أن تكون موجبة",
+      "pricePositive": "السعر يجب أن يكون موجب",
+      "quantityPositive": "الكمية يجب أن تكون موجبة",
+      "productPositive": "المنتج يجب أن يكون موجب",
+      "colorPositive": "اللون يجب أن يكون موجب",
+      "sizePositive": "المقاس يجب أن يكون موجب",
+      "wilayaPositive": "الولاية يجب أن تكون موجبة",
+      "communePositive": "البلدية يجب أن تكون موجبة",
+      "agencyPositive": "الوكالة يجب أن تكون موجبة",
+      "retailPricePositive": "سعر التجزئة يجب أن يكون موجب",
+      "wholesalePricePositive": "سعر الجملة يجب أن يكون موجب",
+      "retailCommissionPositive": "عمولة التجزئة يجب أن تكون موجبة",
+      "wholesaleCommissionPositive": "عمولة الجملة يجب أن تكون موجبة",
+      "weightPositive": "الوزن يجب أن يكون موجب",
+      "trackingPositive": "رقم التتبع يجب أن يكون موجب",
+      "firstNameMin": "الاسم الأول يجب أن يكون على الأقل {min}",
+      "lastNameMin": "الاسم الأخير يجب أن يكون على الأقل {min}",
+      "phoneMin": "الهاتف يجب أن يكون على الأقل {min}",
+      "emailMin": "البريد الإلكتروني يجب أن يكون على الأقل {min}",
+      "nameMin": "الاسم يجب أن يكون على الأقل {min}",
+      "descriptionMin": "الوصف يجب أن يكون على الأقل {min}",
+      "categoryMin": "الفئة يجب أن تكون على الأقل {min}",
+      "priceMin": "السعر يجب أن يكون على الأقل {min}",
+      "quantityMin": "الكمية يجب أن تكون على الأقل {min}",
+      "productMin": "المنتج يجب أن يكون على الأقل {min}",
+      "colorMin": "اللون يجب أن يكون على الأقل {min}",
+      "sizeMin": "المقاس يجب أن يكون على الأقل {min}",
+      "wilayaMin": "الولاية يجب أن تكون على الأقل {min}",
+      "communeMin": "البلدية يجب أن تكون على الأقل {min}",
+      "agencyMin": "الوكالة يجب أن تكون على الأقل {min}",
+      "retailPriceMin": "سعر التجزئة يجب أن يكون على الأقل {min}",
+      "wholesalePriceMin": "سعر الجملة يجب أن يكون على الأقل {min}",
+      "retailCommissionMin": "عمولة التجزئة يجب أن تكون على الأقل {min}",
+      "wholesaleCommissionMin": "عمولة الجملة يجب أن تكون على الأقل {min}",
+      "weightMin": "الوزن يجب أن يكون على الأقل {min}",
+      "trackingMin": "رقم التتبع يجب أن يكون على الأقل {min}"
+    }
+  },
+  "actions": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "view": "عرض",
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "import": "استيراد",
+    "refresh": "تحديث",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "reset": "إعادة تعيين",
+    "close": "إغلاق",
+    "confirm": "تأكيد"
+  },
+  "messages": {
+    "success": {
+      "saved": "تم الحفظ بنجاح",
+      "created": "تم الإنشاء بنجاح",
+      "updated": "تم التحديث بنجاح",
+      "deleted": "تم الحذف بنجاح",
+      "exported": "تم التصدير بنجاح",
+      "imported": "تم الاستيراد بنجاح"
+    },
+    "error": {
+      "generic": "حدث خطأ",
+      "network": "خطأ في الشبكة",
+      "validation": "خطأ في التحقق",
+      "notFound": "المورد غير موجود",
+      "unauthorized": "وصول غير مصرح به",
+      "forbidden": "الوصول محظور",
+      "serverError": "خطأ في الخادم"
+    },
+    "loading": "جاري التحميل...",
+    "noData": "لا توجد بيانات متاحة",
+    "noResults": "لا توجد نتائج"
+  },
+  "dialogs": {
+    "leadCreation": {
+      "title": "إضافة عميل محتمل",
+      "description": "إنشاء عميل محتمل جديد لعميلك.",
+      "success": "تم إنشاء العميل المحتمل بنجاح",
+      "error": "فشل في إنشاء العميل المحتمل"
+    },
+    "leadDetails": {
+      "title": "تفاصيل العميل المحتمل",
+      "description": "عرض المعلومات التفصيلية حول هذا العميل المحتمل.",
+      "edit": "تعديل العميل المحتمل",
+      "delete": "حذف العميل المحتمل"
+    },
+    "leadDeletion": {
+      "title": "حذف العميل المحتمل",
+      "description": "هل أنت متأكد من أنك تريد حذف هذا العميل المحتمل؟ لا يمكن التراجع عن هذا الإجراء.",
+      "confirm": "نعم، احذف العميل المحتمل",
+      "cancel": "إلغاء",
+      "success": "تم حذف العميل المحتمل بنجاح",
+      "error": "فشل في حذف العميل المحتمل",
+      "loading": "جاري الحذف..."
+    },
+    "bulkDeletion": {
+      "title": "حذف العملاء المحتملين المحددين",
+      "description": "هل أنت متأكد من أنك تريد حذف {count} عميل محتمل محدد؟ لا يمكن التراجع عن هذا الإجراء.",
+      "confirm": "نعم، احذف {count} عميل محتمل",
+      "cancel": "إلغاء",
+      "success": "تم حذف {count} عميل محتمل بنجاح",
+      "error": "فشل في حذف العملاء المحتملين",
+      "loading": "جاري الحذف..."
+    },
+    "orderDetails": {
+      "title": "تفاصيل الطلب",
+      "description": "عرض المعلومات التفصيلية حول هذا الطلب.",
+      "trackOrder": "تتبع الطلب",
+      "updateStatus": "تحديث الحالة"
+    },
+    "orderTracking": {
+      "title": "تتبع الطلب",
+      "description": "تتبع حالة تسليم هذا الطلب.",
+      "trackingNumber": "رقم التتبع",
+      "currentStatus": "الحالة الحالية",
+      "estimatedDelivery": "التسليم المتوقع",
+      "deliveryHistory": "تاريخ التسليم"
+    },
+    "productCreation": {
+      "title": "إضافة منتج",
+      "description": "إنشاء منتج جديد لفهرسك.",
+      "success": "تم إنشاء المنتج بنجاح",
+      "error": "فشل في إنشاء المنتج"
+    },
+    "productDetails": {
+      "title": "تفاصيل المنتج",
+      "description": "عرض المعلومات التفصيلية حول هذا المنتج.",
+      "edit": "تعديل المنتج",
+      "delete": "حذف المنتج"
+    },
+    "parcelDetails": {
+      "title": "تفاصيل الطرد",
+      "description": "عرض المعلومات التفصيلية حول هذا الطرد.",
+      "trackParcel": "تتبع الطرد",
+      "updateStatus": "تحديث الحالة"
+    },
+    "withdrawRequest": {
+      "title": "طلب سحب",
+      "description": "طلب سحب أرباحك.",
+      "amount": "المبلغ",
+      "bankAccount": "الحساب المصرفي",
+      "confirm": "طلب السحب",
+      "cancel": "إلغاء",
+      "success": "تم تقديم طلب السحب بنجاح",
+      "error": "فشل في تقديم طلب السحب"
+    }
+  },
+  "tables": {
+    "columns": {
+      "fullName": "الاسم الكامل",
+      "firstName": "الاسم الأول",
+      "lastName": "الاسم الأخير",
+      "phone": "رقم الهاتف",
+      "email": "البريد الإلكتروني",
+      "wilaya": "الولاية",
+      "commune": "البلدية",
+      "product": "المنتج",
+      "status": "الحالة",
+      "createdAt": "تاريخ الإنشاء",
+      "updatedAt": "تاريخ التحديث",
+      "actions": "الإجراءات",
+      "orderNumber": "رقم الطلب",
+      "customer": "العميل",
+      "total": "المجموع",
+      "trackingNumber": "رقم التتبع",
+      "deliveryStatus": "حالة التسليم",
+      "partner": "الشريك",
+      "commission": "العمولة",
+      "weight": "الوزن",
+      "category": "الفئة",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "inventory": "المخزون",
+      "description": "الوصف",
+      "thumbnail": "الصورة المصغرة",
+      "library": "المكتبة",
+      "retailPrice": "سعر التجزئة",
+      "wholesalePrice": "سعر الجملة",
+      "retailCommission": "عمولة التجزئة",
+      "wholesaleCommission": "عمولة الجملة",
+      "retailMinPrice": "أقل سعر تجزئة",
+      "wholesaleMinPrice": "أقل سعر جملة"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "duplicate": "نسخ",
+      "export": "تصدير",
+      "import": "استيراد",
+      "refresh": "تحديث",
+      "selectAll": "تحديد الكل",
+      "deselectAll": "إلغاء تحديد الكل",
+      "bulkDelete": "حذف متعدد",
+      "bulkEdit": "تعديل متعدد",
+      "trackOrder": "تتبع الطلب",
+      "viewDetails": "عرض التفاصيل",
+      "addLead": "إضافة عميل محتمل"
+    },
+    "filters": {
+      "search": "بحث",
+      "searchPlaceholder": "البحث...",
+      "status": "الحالة",
+      "all": "الكل",
+      "initial": "أولي",
+      "notResponding": "لا يستجيب",
+      "unreachable": "غير قابل للوصول",
+      "other": "أخرى",
+      "confirmed": "مؤكد",
+      "busy": "مشغول",
+      "canceled": "ملغي",
+      "processing": "قيد المعالجة",
+      "delivered": "تم التسليم",
+      "returned": "مُرجع",
+      "partner": "الشريك",
+      "dateRange": "نطاق التاريخ",
+      "clearFilters": "مسح المرشحات",
+      "applyFilters": "تطبيق المرشحات"
+    },
+    "loading": {
+      "error": "حدث خطأ أثناء تحميل البيانات"
+    }
+  },
+  "dashboard": {
+    "overview": {
+      "title": "نظرة عامة على لوحة التحكم",
+      "welcome": "مرحباً بعودتك",
+      "totalLeads": "إجمالي العملاء المحتملين",
+      "totalOrders": "إجمالي الطلبات",
+      "totalRevenue": "إجمالي الإيرادات",
+      "totalCommissions": "إجمالي العمولات",
+      "recentActivity": "النشاط الأخير",
+      "quickActions": "الإجراءات السريعة",
+      "statistics": "الإحصائيات",
+      "performance": "الأداء",
+      "leads": "العملاء المحتملين",
+      "orders": "الطلبات",
+      "multilingual": "عرض متعدد اللغات"
+    },
+    "inventory": {
+      "title": "إدارة المخزون",
+      "subtitle": "اختر منتجًا لمراجعة تفاصيل المخزون وتعديل الكميات.",
+      "productLabel": "المنتج",
+      "selectProduct": "اختر منتجًا",
+      "searchEmpty": "لم يتم العثور على منتجات.",
+      "noProducts": "لا توجد منتجات. أنشئ منتجًا لبدء إدارة المخزون.",
+      "selectToView": "اختر منتجًا لعرض تفاصيل المخزون.",
+      "refresh": "تحديث",
+      "refreshAria": "تحديث تفاصيل مراحل المخزون"
+    },
+    "productPages": {
+      "affiliateFriendly": "مناسب للشركاء",
+      "affiliateFriendlyHelp": "علّم هذه الصفحة حتى يعرف الشركاء أنها مخصصة للاستخدام التابع.",
+      "assetsLibrary": {
+        "title": "مكتبة الأصول",
+        "description": "ارفع صورًا ومقاطع فيديو يمكن للشركاء تنزيلها. منفصلة عن الصورة الرئيسية والمعرض والشهادات.",
+        "count": "{count} أصول",
+        "empty": "لا توجد أصول بعد. ارفع صورًا أو فيديو أدناه.",
+        "loadError": "تعذر تحميل الأصول. حاول تحديث الصفحة.",
+        "uploadImages": "رفع الصور",
+        "uploadVideo": "رفع فيديو",
+        "imageAlt": "أصل المكتبة",
+        "videoAlt": "فيديو المكتبة",
+        "unnamed": "أصل بدون اسم",
+        "mediaType": {
+          "image": "صورة",
+          "video": "فيديو"
+        },
+        "deleteAria": "حذف الأصل {name}",
+        "deleteTitle": "حذف الأصل؟",
+        "deleteDescription": "سيُزال الأصل من المكتبة ولن يتمكن الشركاء من تنزيله.",
+        "cancel": "إلغاء",
+        "confirmDelete": "حذف",
+        "saving": "جاري حفظ الأصول…"
+      }
+    }
+  },
+  "common": {
+    "language": "اللغة",
+    "theme": "المظهر",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام",
+    "yes": "نعم",
+    "no": "لا",
+    "ok": "موافق",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "warning": "تحذير",
+    "info": "معلومات"
+  },
+  "products": {
+    "labels": {
+      "name": "الاسم",
+      "description": "الوصف",
+      "category": "الفئة",
+      "retailPrice": "سعر التجزئة",
+      "wholesalePrice": "سعر الجملة",
+      "retailCommission": "عمولة التجزئة",
+      "wholesaleCommission": "عمولة الجملة",
+      "retailMinPrice": "أقل سعر تجزئة",
+      "wholesaleMinPrice": "أقل سعر جملة",
+      "weight": "الوزن (كغ)",
+      "productImage": "صورة المنتج",
+      "productGallery": "معرض المنتج",
+      "commission": "العمولة",
+      "actions": "الإجراءات",
+      "color": "اللون",
+      "size": "الحجم",
+      "inventory": "المخزون",
+      "noImage": "لا توجد صورة",
+      "gallery": "المعرض",
+      "retail": "التجزئة",
+      "wholesale": "الجملة",
+      "price": "السعر",
+      "productDetails": "تفاصيل المنتج"
+    },
+    "placeholders": {
+      "enterName": "أدخل اسم المنتج",
+      "enterDescription": "أدخل وصف المنتج",
+      "selectCategory": "اختر الفئة",
+      "enterRetailPrice": "أدخل سعر التجزئة",
+      "enterWholesalePrice": "أدخل سعر الجملة",
+      "enterRetailCommission": "أدخل عمولة التجزئة",
+      "enterWholesaleCommission": "أدخل عمولة الجملة",
+      "enterWeight": "أدخل الوزن بالكيلوغرام",
+      "searchProducts": "البحث في المنتجات...",
+      "filterByCategory": "تصفية حسب الفئة"
+    },
+    "descriptions": {
+      "retailMinPrice": "أقل سعر مسموح للشركاء في التجزئة",
+      "wholesaleMinPrice": "أقل سعر مسموح للشركاء في الجملة",
+      "weight": "وزن المنتج بالكيلوغرام",
+      "viewAndManage": "عرض وإدارة معلومات المنتج"
+    },
+    "buttons": {
+      "addProduct": "إضافة منتج",
+      "creating": "جاري الإنشاء...",
+      "clearFilters": "مسح المرشحات",
+      "viewDetails": "عرض التفاصيل",
+      "editProduct": "تعديل المنتج",
+      "deleteProduct": "حذف المنتج",
+      "addImages": "إضافة صور",
+      "addItem": "إضافة عنصر",
+      "addItems": "إضافة عناصر",
+      "saveItems": "حفظ العناصر",
+      "uploading": "جاري الرفع...",
+      "saveImages": "حفظ الصور",
+      "downloading": "جاري التحميل...",
+      "downloadGallery": "تحميل المعرض",
+      "backToProducts": "العودة إلى المنتجات"
+    },
+    "categories": {
+      "all": "جميع الفئات",
+      "electronics": "الإلكترونيات",
+      "clothing": "الملابس",
+      "home": "المنزل والحديقة",
+      "sports": "الرياضة والهواء الطلق",
+      "books": "الكتب",
+      "beauty": "الجمال والصحة",
+      "toys": "الألعاب والألعاب"
+    },
+    "validation": {
+      "nameRequired": "اسم المنتج مطلوب",
+      "descriptionRequired": "وصف المنتج مطلوب",
+      "categoryRequired": "فئة المنتج مطلوبة",
+      "retailPriceRequired": "سعر التجزئة مطلوب",
+      "wholesalePriceRequired": "سعر الجملة مطلوب",
+      "retailCommissionRequired": "عمولة التجزئة مطلوبة",
+      "wholesaleCommissionRequired": "عمولة الجملة مطلوبة",
+      "weightRequired": "وزن المنتج مطلوب",
+      "sizeRequired": "الحجم مطلوب",
+      "colorRequired": "اللون مطلوب",
+      "inventoryPositive": "يجب أن يكون المخزون رقماً موجباً",
+      "itemsRequired": "عنصر واحد على الأقل مطلوب"
+    },
+    "errors": {
+      "loadingError": "خطأ في تحميل المنتج",
+      "loadingErrorMessage": "فشل في تحميل تفاصيل المنتج",
+      "notFound": "المنتج غير موجود",
+      "notFoundMessage": "المنتج الذي تبحث عنه غير موجود."
+    },
+    "messages": {
+      "success": "نجح",
+      "error": "خطأ",
+      "downloadSuccess": "تم تحميل الملفات بنجاح",
+      "downloadError": "فشل في تحميل الملفات"
+    }
+  },
+  "orders": {
+    "labels": {
+      "orderDetails": "تفاصيل الطلب",
+      "orderNumber": "رقم الطلب",
+      "customerName": "اسم العميل",
+      "product": "المنتج",
+      "quantity": "الكمية",
+      "price": "السعر",
+      "color": "اللون",
+      "size": "الحجم",
+      "orderDate": "تاريخ الطلب",
+      "status": "الحالة",
+      "deliveryFees": "رسوم التوصيل",
+      "trackingId": "معرف التتبع",
+      "comment": "تعليق",
+      "orderItems": "عناصر الطلب",
+      "itemId": "معرف العنصر",
+      "fullName": "الاسم الكامل",
+      "phone": "الهاتف",
+      "location": "الموقع",
+      "deliveryInformation": "معلومات التوصيل",
+      "agency": "الوكالة",
+      "deliveryCompany": "شركة التوصيل",
+      "tracking": "التتبع",
+      "pricingInformation": "معلومات التسعير",
+      "productPrice": "سعر المنتج",
+      "totalPrice": "السعر الإجمالي",
+      "series": "سلاسل",
+      "noItemsFound": "لم يتم العثور على عناصر"
+    },
+    "buttons": {
+      "close": "إغلاق",
+      "retry": "إعادة المحاولة"
+    },
+    "messages": {
+      "loading": "جاري تحميل تفاصيل الطلب...",
+      "loadingOrderDetails": "جاري تحميل تفاصيل الطلب"
+    },
+    "errors": {
+      "loadingError": "فشل في تحميل تفاصيل الطلب",
+      "notFound": "لا توجد تفاصيل طلب متاحة.",
+      "error": "خطأ",
+      "failedToLoad": "فشل في تحميل تفاصيل الطلب. يرجى المحاولة مرة أخرى."
+    },
+    "types": {
+      "wholesale": "جملة",
+      "retail": "مفرق",
+      "order": "طلب"
+    }
+  },
+  "leads": {
+    "sections": {
+      "customerInfo": "معلومات العميل",
+      "orderSummary": "ملخص الطلب"
+    },
+    "forms": {
+      "labels": {
+        "stopdeskDelivery": "توصيل Stopdesk",
+        "wilaya": "الولاية",
+        "commune": "البلدية",
+        "deliveryAgency": "وكالة التوصيل",
+        "notesOptional": "ملاحظات (اختياري)",
+        "product": "المنتج",
+        "quantity": "الكمية",
+        "wholesale": "الجملة",
+        "color": "اللون",
+        "size": "الحجم",
+        "subtotal": "المجموع الفرعي",
+        "totalWeight": "الوزن الإجمالي",
+        "deliveryFee": "رسوم التوصيل",
+        "totalAmount": "المبلغ الإجمالي",
+        "estimatedDelivery": "التوصيل المقدر"
+      },
+      "placeholders": {
+        "selectWilaya": "اختر الولاية",
+        "selectCommune": "اختر البلدية",
+        "selectAgency": "اختر الوكالة",
+        "addNotes": "أضف أي ملاحظات إضافية...",
+        "selectProduct": "اختر المنتج",
+        "selectColor": "اختر اللون",
+        "selectSize": "اختر الحجم"
+      },
+      "descriptions": {
+        "stopdeskDelivery": "التوصيل إلى stopdesk بدلاً من المنزل",
+        "wholesalePricing": "تفعيل لأسعار الجملة"
+      }
+    },
+    "buttons": {
+      "addLead": "إضافة عميل محتمل",
+      "createLead": "إنشاء عميل محتمل",
+      "creatingLead": "جاري إنشاء العميل المحتمل...",
+      "addProduct": "إضافة منتج"
+    },
+    "descriptions": {
+      "createNewLead": "إنشاء عميل محتمل جديد لعملائك."
+    }
+  },
+  "payouts": {
+    "labels": {
+      "currentBalance": "الرصيد الحالي",
+      "activeBalance": "الرصيد النشط",
+      "totalEarnings": "إجمالي الأرباح",
+      "totalPaid": "إجمالي المدفوع",
+      "recentPayments": "المدفوعات الأخيرة",
+      "paymentStatistics": "إحصائيات المدفوعات (العام الماضي)",
+      "requestWithdraw": "طلب سحب",
+      "amount": "المبلغ (دج)"
+    },
+    "buttons": {
+      "requestWithdraw": "طلب سحب",
+      "request": "طلب"
+    },
+    "messages": {
+      "partnerInfoNotAvailable": "معلومات الشريك غير متاحة",
+      "failedToLoadBalance": "فشل في تحميل بيانات الرصيد",
+      "withdrawalProcessingTime": "يتم معالجة السحوبات خلال 1-3 أيام عمل",
+      "failedToLoadPayments": "فشل في تحميل المدفوعات",
+      "noPaymentsFound": "لم يتم العثور على مدفوعات"
+    }
+  },
+  "partners": {
+    "labels": {
+      "partners": "الشركاء",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "gender": "الجنس",
+      "background": "الخلفية",
+      "status": "الحالة",
+      "profileImage": "صورة الملف الشخصي",
+      "name": "الاسم",
+      "birthdate": "تاريخ الميلاد",
+      "bio": "السيرة الذاتية",
+      "professionalBackground": "الخلفية المهنية",
+      "socialLinks": "الروابط الاجتماعية",
+      "linkedin": "لينكد إن",
+      "instagram": "إنستغرام",
+      "tiktok": "تيك توك",
+      "profilePreview": "معاينة الملف الشخصي",
+      "birthdateLabel": "تاريخ الميلاد:",
+      "professionalBackgroundLabel": "الخلفية المهنية",
+      "partnerDetails": "تفاصيل الشريك",
+      "partnerId": "معرف الشريك",
+      "deliveryRate": "معدل التسليم",
+      "cancelRate": "معدل الإلغاء",
+      "totalReferrals": "إجمالي الإحالات",
+      "totalOrders": "إجمالي الطلبات"
+    },
+    "placeholders": {
+      "searchPartners": "البحث في الشركاء...",
+      "filterByStatus": "تصفية حسب الحالة",
+      "filterByBackground": "تصفية حسب الخلفية",
+      "yourFullName": "اسمك الكامل",
+      "tellUsAboutYourself": "أخبرنا عن نفسك",
+      "describeYourExperience": "اوصف خبرتك المهنية",
+      "linkedinUrl": "https://linkedin.com/in/your-profile",
+      "instagramUrl": "https://instagram.com/yourhandle",
+      "tiktokUrl": "https://tiktok.com/yourhandle"
+    },
+    "buttons": {
+      "clearFilters": "مسح المرشحات",
+      "retry": "إعادة المحاولة",
+      "editProfile": "تعديل الملف الشخصي",
+      "previewProfile": "معاينة الملف الشخصي",
+      "saveChanges": "حفظ التغييرات",
+      "saving": "جاري الحفظ..."
+    },
+    "status": {
+      "allStatuses": "جميع الحالات",
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "pending": "في الانتظار",
+      "suspended": "معلق"
+    },
+    "backgrounds": {
+      "allBackgrounds": "جميع الخلفيات",
+      "marketing": "التسويق",
+      "sales": "المبيعات",
+      "technology": "التكنولوجيا",
+      "business": "الأعمال",
+      "education": "التعليم",
+      "healthcare": "الرعاية الصحية",
+      "finance": "المالية",
+      "other": "أخرى"
+    },
+    "messages": {
+      "loadingProfile": "جاري تحميل الملف الشخصي...",
+      "errorLoadingPartners": "خطأ في تحميل الشركاء",
+      "failedToLoadPartners": "فشل في تحميل الشركاء",
+      "failedToLoadProfile": "فشل في تحميل الملف الشخصي",
+      "pleaseSignIn": "يرجى تسجيل الدخول لعرض لوحة التحكم الخاصة بك",
+      "loadingDashboard": "جاري تحميل لوحة التحكم...",
+      "failedToLoadDashboard": "فشل في تحميل بيانات لوحة التحكم"
+    },
+    "validation": {
+      "userIdRequired": "معرف المستخدم مطلوب",
+      "usernameMinLength": "يجب أن يحتوي اسم المستخدم على 3 أحرف على الأقل",
+      "fullNameRequired": "الاسم الكامل مطلوب",
+      "invalidEmail": "عنوان بريد إلكتروني غير صالح",
+      "invalidUrl": "رابط غير صالح",
+      "nameMinLength": "يجب أن يحتوي الاسم على حرفين على الأقل",
+      "birthdateRequired": "تاريخ الميلاد مطلوب",
+      "invalidDateFormat": "تنسيق تاريخ غير صالح",
+      "backgroundRequired": "الخلفية مطلوبة",
+      "bioMaxLength": "يجب أن تحتوي السيرة الذاتية على 500 حرف كحد أقصى",
+      "invalidImageUrl": "رابط صورة غير صالح"
+    }
+  },
+  "storefront": {
+    "infoBar": {
+      "content": "بإمكانك استبدال أو إرجاع المنتج خلال 48 ساعة",
+      "close": "إغلاق شريط المعلومات"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "onsale": "تخفيضات",
+      "cart": "سلة التسوق",
+      "terms": "الشروط",
+      "openMenu": "فتح قائمة المتجر",
+      "search": "البحث عن المنتجات",
+      "viewCart": "عرض سلة التسوق"
+    },
+    "footer": {
+      "heading": "بلّامي",
+      "description": "وجهتك الموثوقة للأزياء. اكتشف منتجات عالية الجودة مع راحة الدفع عند الاستلام.",
+      "links": {
+        "catalog": "الكتالوج",
+        "cart": "سلة التسوق",
+        "terms": "الشروط",
+        "dashboard": "لوحة التحكم"
+      },
+      "supportPrompt": "تحتاج مساعدة؟",
+      "supportEmail": "support@bellami.fashion",
+      "copyright": "© {year} بلّامي. جميع الحقوق محفوظة."
+    },
+    "home": {
+      "badge": "متجر الدفع عند الاستلام",
+      "headline": "اكتشف منتجات سيحبها عملاؤك",
+      "subheadline": "تصفح منتجات مصممة حسب الطلب، واجمع العملاء المحتملين فوراً، وحوّلهم إلى طلبات دفع عند الاستلام بدون دفعات مسبقة.",
+      "ctaExplore": "استكشف الكتالوج",
+      "ctaDashboard": "انتقل إلى لوحة التحكم",
+      "featuredTitle": "منتجات مميزة",
+      "featuredSubtitle": "كل صفحة مُحسّنة لالتقاط العملاء المحتملين — اختر واحدة وابدأ البيع فوراً."
+    },
+    "onsale": {
+      "eyebrow": "عروض محدودة",
+      "headline": "تخفيضات خيالية",
+      "instructions": "للطلب ادخل معلوماتك الشخصية وخير الموديل لي بغيت",
+      "subheadline": "أدخل اسمك ورقم هاتفك ثم اضغط على منتج للطلب — بدون اختيار المقاس أو اللون.",
+      "fullName": "اسمك",
+      "fullNamePlaceholder": "اسمك",
+      "phone": "رقم هاتفك",
+      "phonePlaceholder": "رقم هاتفك",
+      "size": "المقاس",
+      "sizePlaceholder": "اختر المقاس",
+      "emptyForSize": "لا توجد منتجات متاحة بهذا المقاس حالياً.",
+      "fillHint": "املأ الاسم والهاتف لتفعيل الطلب.",
+      "readyHint": "اضغط على أي منتج أدناه لتأكيد طلبك.",
+      "fillContactTitle": "بيانات الاتصال مطلوبة",
+      "fillContactDescription": "يرجى إدخال الاسم الكامل ورقم الهاتف أولاً.",
+      "cooldownTitle": "يرجى الانتظار",
+      "cooldownDescription": "لقد قمت بطلب مسبقاً. يمكنك الطلب مرة أخرى خلال حوالي {minutes} دقيقة.",
+      "empty": "لا توجد منتجات مخفضة حالياً. تحقق لاحقاً.",
+      "gridAria": "منتجات التخفيضات",
+      "orderAria": "اطلب {headline} بسعر {price}",
+      "selectAria": "اختر {headline} بسعر {price}",
+      "selectHint": "اختر منتجاً ثم اضغط اطلب الآن.",
+      "selectedCount": "تم اختيار منتج واحد",
+      "orderNow": "اطلب الآن",
+      "selectProductsTitle": "اختر منتجاً",
+      "selectProductsDescription": "اختر منتجاً قبل الطلب.",
+      "successTitle": "تم استلام الطلب",
+      "successDescription": "سنتواصل معك قريباً لتأكيد طلبك.",
+      "validation": {
+        "fullName": "أدخل اسمك الكامل.",
+        "phoneMin": "رقم الهاتف يجب أن يكون 10 أرقام على الأقل.",
+        "phoneMax": "رقم الهاتف يجب ألا يتجاوز 20 حرفاً.",
+        "size": "اختر المقاس."
+      }
+    },
+    "search": {
+      "title": "ابحث عن المنتجات",
+      "subtitle": "رشّح حسب العنوان الرئيسي أو الرابط للعثور على المنتج الذي تحتاجه.",
+      "inputPlaceholder": "ابحث عن المنتجات...",
+      "results": "{count, plural, zero {عرض 0 منتج} one {عرض منتج واحد} two {عرض منتجين} few {عرض # منتجات} many {عرض # منتج} other {عرض # منتج}}",
+      "empty": "لم يتم العثور على منتجات لـ \"{query}\".",
+      "badgeTrending": "رائج الآن",
+      "badgeBundle": "/ باقة",
+      "badgeCod": "💡 جاهز للدفع عند الاستلام",
+      "viewDetails": "عرض التفاصيل",
+      "defaultCategory": "وصول جديد",
+      "stock": {
+        "in": "{count} متوفر في المخزون",
+        "out": "طلب مسبق"
+      },
+      "imagePlaceholder": "الصورة قادمة قريباً",
+      "cardAria": "فتح المنتج لـ {headline}",
+      "currencySymbol": "دج",
+      "freeShipping": "توصيل مجاني"
+    },
+    "cart": {
+      "pageTitle": "سلة التسوق",
+      "pageSubtitle": "عدّل الكميات أو تابع لتقديم طلبك.",
+      "emptyMessage": "سلتك فارغة.",
+      "emptyLink": "تصفح المنتجات",
+      "emptySuffix": "لبدء إضافة الباقات.",
+      "drawerTitle": "سلة التسوق",
+      "drawerEmpty": "سلتك فارغة حالياً.",
+      "drawerCheckout": "متابعة للطلب",
+      "drawerContinue": "متابعة التصفح",
+      "floatingButton": "السلة",
+      "summary": {
+        "title": "ملخص الطلب",
+        "subtitle": "تحقق من كميات الباقات قبل إرسال طلب الدفع عند الاستلام.",
+        "items": "العناصر",
+        "quantity": "إجمالي الكمية",
+        "total": "المبلغ المستحق",
+        "disclaimer": "يتم تأكيد طلبات الدفع عند الاستلام من قبل وكلائنا خلال 24 ساعة. يمكنك تحديث الطلب أو إلغاؤه من لوحة التحكم مباشرة.",
+        "checkout": "تأكيد طلب الدفع عند الاستلام"
+      }
+    },
+    "cartItem": {
+      "noImage": "لا توجد صورة",
+      "size": "المقاس",
+      "each": "لكل قطعة",
+      "remove": "إزالة"
+    },
+    "orderForm": {
+      "unitsLabel": "القطعة {index}",
+      "bundleAria": "اختر الباقة",
+      "bundleSummary": "{units, plural, zero {0 قطعة} one {قطعة واحدة} two {قطعتان} few {# قطع} many {# قطعة} other {# قطعة}} • {price} لكل قطعة",
+      "bundleTotal": "الإجمالي: {price}",
+      "singleBundleSummary": "{label} • {price} لكل قطعة",
+      "bundleOption": "{count, plural, zero {0 قطعة} one {قطعة واحدة} two {قطعتان} few {# قطع} many {# قطعة} other {# قطعة}}",
+      "sizesNotRequired": "لا يلزم تحديد مقاسات لهذا اللون.",
+      "offerLabel": "عرض: {offer}",
+      "orderTotal": "إجمالي الطلب",
+      "promotionMissing": "لم يتم اختيار عرض",
+      "submit": "اطلب الآن",
+      "submitting": "جارٍ الإرسال...",
+      "labels": {
+        "fullName": "الاسم الكامل",
+        "phone": "رقم الهاتف",
+        "commune": "البلدية",
+        "wilaya": "الولاية",
+        "bundle": "إختر العرض",
+        "color": "اللون",
+        "size": "المقاس",
+        "height": "الطول",
+        "weight": "الوزن"
+      },
+      "placeholders": {
+        "fullName": "اسم الزبون",
+        "phone": "05 XX XX XX XX",
+        "commune": "البلدية",
+        "wilaya": "الولاية"
+      },
+      "validation": {
+        "fullName": "يرجى إدخال الاسم الكامل",
+        "phoneMin": "يجب أن يحتوي الهاتف على 6 أرقام على الأقل",
+        "phoneMax": "يجب ألا يتجاوز الهاتف 20 حرفاً",
+        "commune": "البلدية مطلوبة",
+        "wilaya": "الولاية مطلوبة",
+        "color": "اختر لوناً",
+        "size": "اختر مقاساً",
+        "variantCount": "اختر {count, plural, zero {0 عنصر} one {عنصراً واحداً} two {عنصرين} few {# عناصر} many {# عنصراً} other {# عنصراً}}",
+        "bundle": "اختر باقة"
+      }
+    },
+    "product": {
+      "breadcrumbs": {
+        "home": "الرئيسية",
+        "catalog": "الكتالوج"
+      },
+      "gallery": {
+        "placeholder": "الصورة قادمة قريباً",
+        "aria": "عرض صورة المعرض {index}",
+        "prev": "السابق",
+        "next": "التالي"
+      },
+      "testimonials": {
+        "title": "آراء العملاء"
+      },
+      "status": {
+        "inStock": "متوفر",
+        "backOrder": "طلب مسبق",
+        "updated": "تم التحديث في {date}"
+      },
+      "pricing": {
+        "perUnit": "لكل قطعة",
+        "label": "{label} • الإجمالي {price}",
+        "badge": "{label}: {price} لكل قطعة"
+      },
+      "description": "الوصف",
+      "info": {
+        "fastResponseTitle": "استجابة سريعة",
+        "fastResponseDesc": "عند ملء النموذج، سيتواصل معك فريقنا في أقل من 8 ساعات.",
+        "exchangeReturnTitle": "الاستبدال والإرجاع",
+        "exchangeReturnDesc": "يحق للعميل استبدال أو إرجاع المنتج خلال 48 ساعة إذا لم يطابق توقعاته.",
+        "supportTitle": "فريق الدعم",
+        "supportDesc": "فريق الدعم لدينا متاح على مدار الساعة لمساعدتك."
+      },
+      "leadForm": {
+        "headline": "للطلب أدخل معلوماتك",
+        "subheadline": "يحق لك إرجاع أو استبدال المنتج خلال 48 ساعة. املأ بياناتك أدناه وسنؤكد طلبك في أقل من 8 ساعات",
+        "orderInProgressTitle": "يرجى الانتظار",
+        "orderInProgress": "لديك طلب قيد المعالجة بالفعل. يمكنك إرسال طلب جديد خلال {minutes} دقيقة."
+      },
+      "toast": {
+        "title": "تم إرسال الطلب",
+        "description": "استلمنا طلبك. سيتواصل معك فريقنا قريباً."
+      },
+      "notFound": "لم يتم العثور على المنتج.",
+      "freeShipping": "توصيل مجاني"
+    },
+    "thankYou": {
+      "title": "شكراً لك!",
+      "description": "تم إرسال طلبك بنجاح. سيتواصل معك فريقنا قريباً لتأكيد تفاصيل الطلب.",
+      "body": "يمكنك مواصلة تصفح المنتجات الأخرى.",
+      "continue": "متابعة التسوق",
+      "viewCart": "عرض السلة"
+    },
+    "terms": {
+      "title": "شروط الخدمة",
+      "subtitle": "يرجى مراجعة هذه الشروط بعناية قبل استخدام المنصة.",
+      "cardTitle": "شروط متجر بلّامي للدفع عند الاستلام",
+      "sections": {
+        "acceptance": {
+          "title": "1. قبول الشروط",
+          "content": "من خلال الوصول إلى متجرنا أو لوحة التحكم الخاصة بالشركاء، فإنك توافق على الالتزام بهذه الشروط وجميع القوانين والأنظمة المعمول بها."
+        },
+        "responsibilities": {
+          "title": "2. مسؤوليات الشريك",
+          "content": "يتحمل الشركاء مسؤولية دقة بيانات العملاء المحتملين، وشفافية أساليب التسويق، والامتثال للتشريعات المحلية المتعلقة بالدفع عند الاستلام."
+        },
+        "availability": {
+          "title": "3. توفر المنتجات",
+          "content": "قد تتغير مستويات المخزون والأسعار دون إشعار. إرسال العميل المحتمل لا يضمن تنفيذ الطلب حتى يؤكده فريقنا."
+        },
+        "payment": {
+          "title": "4. الدفعات والعمولات",
+          "content": "يتم صرف العمولات بعد نجاح التسليم وتحصيل الدفعة. قد يؤدي إرسال عملاء محتملين احتياليين إلى تعليق امتيازات الشريك."
+        },
+        "changes": {
+          "title": "5. التعديلات على الشروط",
+          "content": "نحتفظ بالحق في تحديث هذه الشروط بشكل دوري. يشكل استمرارك في استخدام المنصة قبولاً بأي تعديلات."
+        }
+      }
+    }
+  }
+}

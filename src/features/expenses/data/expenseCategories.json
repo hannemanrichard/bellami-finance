@@ -1,0 +1,20 @@
+[
+  { "category": "salary", "type": "fixed", "department": "ecomeast" },
+  { "category": "transport", "type": "variable", "department": "ecomeast" },
+  { "category": "billing", "type": "fixed", "department": "ecomeast" },
+  { "category": "marketing", "type": "variable", "department": "ecomeast" },
+  { "category": "software", "type": "fixed", "department": "ecomeast" },
+  { "category": "packaging", "type": "variable", "department": "ecomeast" },
+  { "category": "investment", "type": "variable", "department": "ecomeast" },
+  { "category": "media", "type": "variable", "department": "ecomeast" },
+  { "category": "other", "type": "variable", "department": "ecomeast" },
+  { "category": "salary", "type": "fixed", "department": "garment-factory" },
+  { "category": "textile", "type": "variable", "department": "garment-factory" },
+  { "category": "transport", "type": "variable", "department": "garment-factory" },
+  { "category": "mercerie", "type": "variable", "department": "garment-factory" },
+  { "category": "investment", "type": "variable", "department": "garment-factory" },
+  { "category": "avance", "type": "variable", "department": "garment-factory" },
+  { "category": "location", "type": "fixed", "department": "garment-factory" },
+  { "category": "billing", "type": "fixed", "department": "garment-factory" },
+  { "category": "other", "type": "variable", "department": "garment-factory" }
+]
