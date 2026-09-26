@@ -47,7 +47,7 @@ const formatCategoryLabel = (category: string): string => {
 };
 
 const fieldClassName =
-  "h-24 rounded-2xl border border-[#D5E4F2] bg-white px-4 text-3xl text-[#003087] shadow-none placeholder:text-[#8AA4BE] focus-visible:border-[#0070BA] focus-visible:ring-2 focus-visible:ring-[#0070BA]/30";
+  "h-16 rounded-2xl border border-[#D5E4F2] bg-white px-4 text-xl text-[#003087] shadow-none placeholder:text-[#8AA4BE] focus-visible:border-[#0070BA] focus-visible:ring-2 focus-visible:ring-[#0070BA]/30";
 
 const getDefaultFormValues = (): ExpenseFormInput => ({
   date: getTodayDateInputValue(),
@@ -118,10 +118,10 @@ export const AddExpenseForm = () => {
       <header className="bg-[#E4EDF5] px-5 pb-7 pt-[max(1.25rem,env(safe-area-inset-top))] text-[#003087]">
         <div className="flex items-center justify-between gap-3">
           <div>
-            <p className="text-base text-[#003087]/70">bellami-finance</p>
-            <h1 className="text-3xl font-semibold tracking-tight">Add expense</h1>
+            <p className="text-sm text-[#003087]/70">bellami-finance</p>
+            <h1 className="text-2xl font-semibold tracking-tight">Add expense</h1>
           </div>
-          <SignOutButton className="text-lg text-[#003087] hover:bg-[#003087]/10 hover:text-[#003087]" />
+          <SignOutButton className="text-base text-[#003087] hover:bg-[#003087]/10 hover:text-[#003087]" />
         </div>
       </header>
 
@@ -136,7 +136,7 @@ export const AddExpenseForm = () => {
             name="date"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-2xl font-semibold text-[#003087]">
+                <FormLabel className="text-lg font-semibold text-[#003087]">
                   Date
                 </FormLabel>
                 <FormControl>
@@ -147,7 +147,7 @@ export const AddExpenseForm = () => {
                     {...field}
                   />
                 </FormControl>
-                <FormMessage className="text-lg" />
+                <FormMessage className="text-base" />
               </FormItem>
             )}
           />
@@ -157,7 +157,7 @@ export const AddExpenseForm = () => {
             name="department"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-2xl font-semibold text-[#003087]">
+                <FormLabel className="text-lg font-semibold text-[#003087]">
                   Department
                 </FormLabel>
                 <FormControl>
@@ -169,7 +169,7 @@ export const AddExpenseForm = () => {
                       return (
                         <label
                           key={department}
-                          className={`flex min-h-20 cursor-pointer items-center justify-center rounded-xl px-3 text-center text-2xl font-medium ${
+                          className={`flex min-h-14 cursor-pointer items-center justify-center rounded-xl px-3 text-center text-lg font-medium ${
                             isSelected
                               ? "bg-[#0070BA] text-white shadow-sm"
                               : "text-[#003087]"
@@ -191,7 +191,7 @@ export const AddExpenseForm = () => {
                     })}
                   </fieldset>
                 </FormControl>
-                <FormMessage className="text-lg" />
+                <FormMessage className="text-base" />
               </FormItem>
             )}
           />
@@ -201,7 +201,7 @@ export const AddExpenseForm = () => {
             name="category"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-2xl font-semibold text-[#003087]">
+                <FormLabel className="text-lg font-semibold text-[#003087]">
                   Category
                 </FormLabel>
                 <FormControl>
@@ -219,7 +219,7 @@ export const AddExpenseForm = () => {
                     className={`${fieldClassName} justify-between font-normal hover:bg-white`}
                   />
                 </FormControl>
-                <FormMessage className="text-lg" />
+                <FormMessage className="text-base" />
               </FormItem>
             )}
           />
@@ -229,7 +229,7 @@ export const AddExpenseForm = () => {
             name="amount"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-2xl font-semibold text-[#003087]">
+                <FormLabel className="text-lg font-semibold text-[#003087]">
                   Amount
                 </FormLabel>
                 <FormControl>
@@ -241,11 +241,11 @@ export const AddExpenseForm = () => {
                     enterKeyHint="done"
                     placeholder="0.00"
                     aria-label="Amount"
-                    className={`${fieldClassName} text-4xl font-semibold`}
+                    className={`${fieldClassName} text-2xl font-semibold`}
                     {...field}
                   />
                 </FormControl>
-                <FormMessage className="text-lg" />
+                <FormMessage className="text-base" />
               </FormItem>
             )}
           />
@@ -256,18 +256,18 @@ export const AddExpenseForm = () => {
               name="comment"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-2xl font-semibold text-[#003087]">
+                  <FormLabel className="text-lg font-semibold text-[#003087]">
                     Comment
                   </FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Describe this expense"
                       aria-label="Comment"
-                      className="min-h-40 rounded-2xl border border-[#D5E4F2] bg-white px-4 py-4 text-3xl text-[#003087] shadow-none placeholder:text-[#8AA4BE] focus-visible:border-[#0070BA] focus-visible:ring-2 focus-visible:ring-[#0070BA]/30"
+                      className="min-h-32 rounded-2xl border border-[#D5E4F2] bg-white px-4 py-3 text-xl text-[#003087] shadow-none placeholder:text-[#8AA4BE] focus-visible:border-[#0070BA] focus-visible:ring-2 focus-visible:ring-[#0070BA]/30"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className="text-lg" />
+                  <FormMessage className="text-base" />
                 </FormItem>
               )}
             />
@@ -276,7 +276,7 @@ export const AddExpenseForm = () => {
           <div className="sticky bottom-0 mt-auto bg-[#F4F8FB]/95 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur">
             <Button
               type="submit"
-              className="h-24 w-full rounded-2xl bg-[#0070BA] text-3xl font-semibold text-white shadow-[0_10px_24px_rgba(0,112,186,0.35)] hover:bg-[#003087]"
+              className="h-16 w-full rounded-2xl bg-[#0070BA] text-xl font-semibold text-white shadow-[0_10px_24px_rgba(0,112,186,0.35)] hover:bg-[#003087]"
               disabled={isBusy || !form.formState.isValid}
               aria-label="Add expense"
             >

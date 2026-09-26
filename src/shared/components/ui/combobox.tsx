@@ -53,7 +53,7 @@ export function Combobox({
       <Command className="w-full">
         <CommandInput
           placeholder={placeholder}
-          className="h-20 text-3xl"
+          className="h-14 text-xl"
         />
         <CommandEmpty>{emptyText}</CommandEmpty>
         <CommandGroup>
@@ -61,7 +61,7 @@ export function Combobox({
             options.map((option) => (
               <CommandItem
                 key={option.value}
-                className="min-h-20 rounded-xl px-3 text-3xl"
+                className="min-h-14 rounded-xl px-3 text-xl"
                 onSelect={() => {
                   onValueChange?.(option.value);
                   setOpen(false);
