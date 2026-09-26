@@ -1,27 +1,25 @@
-const CACHE_NAME = "bellami-finance-v1";
-const APP_SHELL = [
-  "/",
+const CACHE_NAME = "bellami-finance-v2";
+const STATIC_ASSETS = [
   "/favicon.svg",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
   "/icons/apple-touch-icon.png",
 ];
 
+const isAuthPath = (pathname) => {
+  return (
+    pathname.startsWith("/sign-in") ||
+    pathname.startsWith("/sign-up") ||
+    pathname.startsWith("/sign-out")
+  );
+};
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(async (cache) => {
-      await Promise.all(
-        APP_SHELL.map(async (url) => {
-          try {
-            await cache.add(url);
-          } catch {
-            // A protected page can redirect while the worker installs.
-          }
-        })
-      );
-
-      await self.skipWaiting();
-    })
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => cache.addAll(STATIC_ASSETS))
+      .then(() => self.skipWaiting())
   );
 });
 
@@ -43,36 +41,20 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const { request } = event;
 
-  if (request.method !== "GET") {
+  if (request.method !== "GET" || request.mode === "navigate") {
     return;
   }
 
   const url = new URL(request.url);
 
-  if (url.origin !== self.location.origin) {
+  if (url.origin !== self.location.origin || isAuthPath(url.pathname)) {
     return;
   }
 
-  if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put("/", copy));
-          return response;
-        })
-        .catch(async () => {
-          const cachedPage = await caches.match("/");
-          if (cachedPage) {
-            return cachedPage;
-          }
+  const isStaticAsset =
+    STATIC_ASSETS.includes(url.pathname) || url.pathname.startsWith("/icons/");
 
-          return new Response("You are offline. Reconnect to add an expense.", {
-            status: 503,
-            headers: { "Content-Type": "text/plain; charset=utf-8" },
-          });
-        })
-    );
+  if (!isStaticAsset) {
     return;
   }
 
@@ -83,7 +65,7 @@ self.addEventListener("fetch", (event) => {
       }
 
       return fetch(request).then((response) => {
-        if (response.ok && url.pathname.startsWith("/icons/")) {
+        if (response.ok && !response.redirected) {
           const copy = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
         }

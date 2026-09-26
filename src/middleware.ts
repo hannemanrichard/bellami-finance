@@ -1,18 +1,18 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
-const isProtectedRoute = createRouteMatcher(["/"]);
+const isAuthRoute = createRouteMatcher([
+  "/sign-in(.*)",
+  "/sign-up(.*)",
+  "/sign-out(.*)",
+]);
 
 export default clerkMiddleware(async (auth, req) => {
-  if (isProtectedRoute(req)) {
-    const { userId, redirectToSignIn } = await auth();
-
-    if (!userId) {
-      return redirectToSignIn({ returnBackUrl: req.url });
-    }
+  if (isAuthRoute(req)) {
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  await auth.protect();
 });
 
 export const config = {
