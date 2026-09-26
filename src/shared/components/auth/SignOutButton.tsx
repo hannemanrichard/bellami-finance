@@ -3,7 +3,6 @@
 import { Button } from "@/shared/components/ui/button";
 import { cn } from "@/shared/utils/utils";
 import { useClerk } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
 
 interface SignOutButtonProps {
   className?: string;
@@ -11,10 +10,9 @@ interface SignOutButtonProps {
 
 export function SignOutButton({ className }: SignOutButtonProps) {
   const { signOut } = useClerk();
-  const router = useRouter();
 
   const handleSignOut = () => {
-    signOut(() => router.push("/sign-in"));
+    void signOut({ redirectUrl: "/sign-in" });
   };
 
   return (

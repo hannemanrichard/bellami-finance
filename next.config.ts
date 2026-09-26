@@ -17,8 +17,26 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   compress: true,
-  // Optimize redirects - disable trailing slash redirects
   trailingSlash: false,
+  async redirects() {
+    return [
+      {
+        source: "/dashboard",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/dashboard/:path*",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/onboarding",
+        destination: "/",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
